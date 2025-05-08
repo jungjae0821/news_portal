@@ -1,0 +1,13 @@
+{
+    "login": {
+      "Welcome": "Welcome",
+      "login": "Login",
+      "orUse": "Or Use",
+      "signInWith": "Sign in with {sso}"
+    },
+    "newList": {
+      "hottopic": "Hot Topic",
+      "lastestNews": "Latest News"
+    }
+  }
+  

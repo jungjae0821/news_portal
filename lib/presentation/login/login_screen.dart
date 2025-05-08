@@ -1,3 +1,5 @@
+
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -5,6 +7,16 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'login.Welcome'.tr(), //
+          style: TextStyle(
+            fontSize: 40, //
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
   }
 }

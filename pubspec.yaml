@@ -1,9 +1,8 @@
+
 name: news_portal
-description: "A new Flutter project."
+description: "뉴스 포탈 앱"
 
-publish_to: 'none'
-
-
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -13,16 +12,17 @@ dependencies:
   flutter:
     sdk: flutter
 
+  ####### Assets
   cupertino_icons: ^1.0.8
+  lucide_icons_flutter: ^3.0.2
 
-  provider: ^6.1.5
+  ####### Core
   easy_extension:
     git:
       url: https://github.com/scadasystems/Easy-Extension.git
-  lucide_icons_flutter: ^3.0.2
   easy_localization: ^3.0.7+1
   go_router: ^15.1.1
-
+  provider: ^6.1.5
 
 dev_dependencies:
   flutter_test:
@@ -30,7 +30,23 @@ dev_dependencies:
 
   flutter_lints: ^5.0.0
 
-
 flutter:
-
   uses-material-design: true
+
+  assets:
+    - assets/translations/
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
