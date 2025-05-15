@@ -4,9 +4,25 @@ import 'package:news_portal/app/translations/app_trans.dart';
 import 'package:news_portal/presentation/widgets/app_logo.dart';
 import 'package:news_portal/presentation/widgets/app_scaffold.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final textController = TextEditingController();
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+
+  void onLogin() {
+
+    }
   @override
   Widget build(BuildContext context) {
     return AppScaffold(child: Padding(
@@ -27,9 +43,15 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           TextField(
+            controller: textController,
             decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: AppTrans.login.email.tr(),
+            ),
+          ),
+
+          ElevatedButton(onPressed: onLogin, child: Text(
+            AppTrans.login.login.tr()
             ),
           ),
         ],
