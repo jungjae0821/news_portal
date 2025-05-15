@@ -8,19 +8,27 @@ class AppLogo extends StatelessWidget {
     return Row(
       spacing: 10,
       mainAxisSize: MainAxisSize.min,
-      children: [Container(
-            decoration: BoxDecoration(
-              color: Colors.black, 
-              borderRadius: BorderRadius.circular(4),), 
-              child: Text(
-                'News', style: TextStyle(
-                  color: Colors.white, 
-                  fontSize: 16, 
-                  fontWeight: FontWeight.bold,)),), 
-                  Text('Portal', 
-                  style: TextStyle(
-                    color: Colors.white, 
-                    fontSize: 16, 
-                    fontWeight: FontWeight.bold),)],);
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(4),
+          ),
+          padding: EdgeInsets.all(10),
+          child: Text(
+            'News',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Text(
+          'Portal',
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        ),
+      ],
+    );
   }
 }

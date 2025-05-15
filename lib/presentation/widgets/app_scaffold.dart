@@ -1,13 +1,13 @@
+
 import 'package:flutter/material.dart';
 
-class AppScaffold extends StatelessWidget {
+class AppScaffod extends StatelessWidget {
   final Widget child;
-  const AppScaffold({super.key, required this.child});
+
+  const AppScaffod({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(child: child)
-    );
+    return Scaffold(body: SafeArea(child: child));
   }
 }
