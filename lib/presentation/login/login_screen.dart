@@ -10,6 +10,7 @@ class LoginScreen extends StatelessWidget {
     return AppScaffold(child: Padding(
       padding: const EdgeInsets.all(30),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           AppLogo()
         ],
