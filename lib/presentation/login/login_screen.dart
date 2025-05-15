@@ -46,7 +46,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          _textField(),
+          _textField(
+            controller: _emailController,
+            hintText: AppTrans.login.email.tr(),
+          ),
 
           ElevatedButton(onPressed: onLogin, child: Text(
             AppTrans.login.login.tr()
