@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
           controller: _emailController,
           decoration: InputDecoration(
           border: OutlineInputBorder(),
-          hintText: AppTrans.login.email.tr(),
+          hintText: hintText,
           ),
         );
   }
