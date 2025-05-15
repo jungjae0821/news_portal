@@ -24,8 +24,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void onLogin() {
     final email = _emailController.text;
+    final password = _passwordController.text;
 
     debugPrint('이메일: $email');
+    debugPrint('비밀번호: $password');
     }
   @override
   Widget build(BuildContext context) {
