@@ -21,7 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void onLogin() {
+    final email = textController.text;
 
+    debugPrint('이메일: $email');
     }
   @override
   Widget build(BuildContext context) {
