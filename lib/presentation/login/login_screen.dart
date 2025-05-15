@@ -12,16 +12,18 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final textController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   @override
   void dispose() {
-    textController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
     super.dispose();
   }
 
   void onLogin() {
-    final email = textController.text;
+    final email = _emailController.text;
 
     debugPrint('이메일: $email');
     }
@@ -44,13 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          TextField(
-            controller: textController,
-            decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: AppTrans.login.email.tr(),
-            ),
-          ),
+          _textField(),
 
           ElevatedButton(onPressed: onLogin, child: Text(
             AppTrans.login.login.tr()
@@ -59,5 +55,17 @@ class _LoginScreenState extends State<LoginScreen> {
         ],
       )
     ),);
+  }
+
+  TextField _textField({
+    required TextEditingController controller, required String hintText,
+  }) {
+    return TextField(
+          controller: _emailController,
+          decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          hintText: AppTrans.login.email.tr(),
+          ),
+        );
   }
 }
