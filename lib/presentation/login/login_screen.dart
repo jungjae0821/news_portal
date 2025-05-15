@@ -1,22 +1,19 @@
-
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:news_portal/presentation/widgets/app_logo.dart';
+import 'package:news_portal/presentation/widgets/app_scaffold.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'login.Welcome'.tr(), //
-          style: TextStyle(
-            fontSize: 40, //
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    );
+    return AppScaffold(child: Padding(
+      padding: const EdgeInsets.all(30),
+      child: Column(
+        children: [
+          AppLogo()
+        ],
+      )
+    ),);
   }
 }
