@@ -1,15 +1,14 @@
 {
-    "login": {
-      "Welcome": "Welcome",
-      "email": "Email",
-      "password": "Password",
-      "login": "Login",
-      "orUse": "Or Use",
-      "signInWith": "Sign in with {sso}"
-    },
-    "newList": {
-      "hottopic": "Hot Topic",
-      "lastestNews": "Latest News"
-    }
+  "login": {
+    "welcome": "Welcome",
+    "email": "email",
+    "password": "password",
+    "login": "Login",
+    "orUse": "Or Use",
+    "signInWith": "Sign in with {sso}"
+  },
+  "newList": {
+    "hotTopic": "Hot Topic",
+    "lastestNews": "Latest News"
   }
-  
+}
