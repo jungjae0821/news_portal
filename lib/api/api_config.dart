@@ -6,6 +6,7 @@ class ApiConfig {
     login: '$funUrl/auth/get-token', //
   );
   static final news = (
-    getList: '$funUrl/news', //
+    getTopic: '$funUrl/news/Topic',
+    getIssue: '$funUrl/news/Issue', //
   );
 }

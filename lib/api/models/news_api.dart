@@ -6,13 +6,13 @@ import 'package:news_portal/api/api_config.dart';
 import 'package:news_portal/api/models/news_data.dart';
 
 class NewsApi {
-  static Future<List<NewsData>?> getList() async {
+  static Future<List<NewsData>?> getNews(String url) async {
     final result = await http
         .get(
-          Uri.parse(ApiConfig.news.getList), //
+          Uri.parse(ApiConfig.news.getTopic), //
         )
         .catchError((e) {
-          Log.red('뉴스 목록 가져오기 오류: $e');
+          Log.red('인기 뉴스 가져오기 오류: $e');
           return http.Response(e.toString(), 400);
         });
     if (result.statusCode != 200) return null;
@@ -34,4 +34,10 @@ class NewsApi {
     // [news] => List<dynamic>
     // 1. Return List<NewsData>
   }
+
+  static Future<List<NewsData>?> getTopic() =>
+      getNews(ApiConfig.news.getTopic);
+
+  static Future<List<NewsData>?> getLastset() =>
+      getNews(ApiConfig.news.getIssue);
 }
